@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -24,6 +24,7 @@ export function Navbar() {
   return (
     <header className="w-full border-b border-border bg-background/80 backdrop-blur-md fixed top-0 z-50">
       <div className="container mx-auto px-6 flex items-center justify-between h-16">
+        
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
           <Image
@@ -33,7 +34,7 @@ export function Navbar() {
             height={24}
             priority
           />
-          Neighbourhoods
+          <span className="hidden sm:inline">Neighbourhoods</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -93,31 +94,18 @@ export function Navbar() {
 
         {/* Right Controls */}
         <div className="flex items-center gap-3">
-          {/* City Selector */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm">
-                Cities
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>Bangalore</DropdownMenuItem>
-              <DropdownMenuItem>Mumbai</DropdownMenuItem>
-              <DropdownMenuItem>Delhi</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
           {/* Theme Toggle */}
           <ModeToggle />
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu with Hamburger */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="md:hidden">
-                Menu
+              <Button variant="outline" size="sm" className="md:hidden p-2">
+                <Menu className="h-5 w-5" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" className="w-48">
+              {/* Events */}
               <DropdownMenuItem asChild>
                 <Link href="#events">Events</Link>
               </DropdownMenuItem>
@@ -127,6 +115,13 @@ export function Navbar() {
               <DropdownMenuItem asChild>
                 <Link href="#community">Community</Link>
               </DropdownMenuItem>
+
+              <div className="border-t my-1"></div>
+
+              {/* Cities inside mobile menu */}
+              <DropdownMenuItem>Bangalore</DropdownMenuItem>
+              <DropdownMenuItem>Mumbai</DropdownMenuItem>
+              <DropdownMenuItem>Delhi</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
