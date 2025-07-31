@@ -1,14 +1,14 @@
 
 ---
 
-# Localize ➤
+# Neighbourhoods ➤
 
 
 > `“Stay in the loop, locally.”`
 
 ---
 
-Localize helps you find everything happening in your city, from music gigs and food festivals to hackathons, meetups, and volunteer drives, all gathered in one place.
+Neighbourhoods helps you find everything happening in your city, from music gigs and food festivals to hackathons, meetups, and volunteer drives, all gathered in one place.
 
 ---
 
