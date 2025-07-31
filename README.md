@@ -14,7 +14,7 @@ Localize helps you find everything happening in your city, from music gigs and f
 
 ## **What It Does ➤**
 
-### **For Residents**
+### **For Residents ➤**
 
 * **One Place for Local Happenings** → See concerts, markets, hackathons, meetups, and more around you.
 * **Relevant & Organized** → Sorted into clear categories like Music, Food, Tech, Sports, Art.
@@ -24,7 +24,7 @@ Localize helps you find everything happening in your city, from music gigs and f
 
 ---
 
-### **For Local Businesses, Organizers & Creators**
+### **For Local Businesses, Organizers & Creators ➤**
 
 * **Free Event Listings**  → Post your events, offers, and updates easily.
 * **Reach the Right People**  → Get in front of locals who actually care.
