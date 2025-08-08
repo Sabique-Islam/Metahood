@@ -22,7 +22,11 @@ export function Marquee() {
     <section className="w-full border-y border-border/20">
       <InfiniteMarquee
         text={marqueeText}
-        speed={30}
+        speed={70}
+        pauseOnHover={true}
+        reverse={false}
+        repeat={4}
+        gap="1rem"
         className="bg-gradient-to-r from-background via-background/95 to-background"
       />
     </section>
