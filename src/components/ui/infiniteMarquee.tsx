@@ -11,7 +11,7 @@ interface InfiniteMarqueeProps {
 
 const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
   text,
-  speed = 45,
+  speed = 30,
   className = "",
 }) => {
   const createMarqueeContent = () => {
