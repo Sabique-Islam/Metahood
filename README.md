@@ -1,14 +1,14 @@
 
 ---
 
-# Neighbourhoods ➤
+# Metahood ➤
 
 
 > `“Stay in the loop, locally.”`
 
 ---
 
-Neighbourhoods helps you find everything happening in your city, from music gigs and food festivals to hackathons, meetups, and volunteer drives, all gathered in one place.
+Metahood helps you find everything happening in your city, from music gigs and food festivals to hackathons, meetups, and volunteer drives, all gathered in one place.
 
 ---
 

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Neighbourhoods",
+  title: "Metahood",
   description: "Curated gateway to local events, offers, and community life.",
   icons: {
     icon: "/favicon.svg",
