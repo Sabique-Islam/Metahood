@@ -19,7 +19,7 @@ export function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-16">
         {/* Left */}
         <div className="flex-1 text-center lg:text-left w-full lg:max-w-2xl">
-          <Button size="lg" className="rounded-full text-sm mb-6">
+          <Button size="lg" className="rounded-full text-sm mb-6 cursor-pointer">
             Get Started <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
 
@@ -36,13 +36,13 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-stretch">
-            <Button size="lg" className="w-full sm:w-auto min-w-[160px]">
+            <Button size="lg" className="w-full sm:w-auto min-w-[160px] cursor-pointer">
               Explore Now <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto min-w-[160px]"
+              className="w-full sm:w-auto min-w-[160px] cursor-pointer"
             >
               Learn More
             </Button>
