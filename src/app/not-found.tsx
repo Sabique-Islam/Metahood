@@ -1,16 +1,8 @@
-'use client'
-
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Home, ArrowLeft } from 'lucide-react'
 
 export default function NotFound() {
-  const handleGoBack = () => {
-    if (typeof window !== 'undefined') {
-      window.history.back()
-    }
-  }
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="text-center max-w-md mx-auto">
@@ -38,16 +30,6 @@ export default function NotFound() {
               <Home className="mr-2 h-4 w-4" />
               Back to Home
             </Link>
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="w-full sm:w-auto cursor-pointer"
-            onClick={handleGoBack}
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Go Back
           </Button>
         </div>
 
