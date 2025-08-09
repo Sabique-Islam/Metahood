@@ -5,10 +5,15 @@ import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { SignInButton, useUser } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+import { useRouter } from "next/navigation";
 
 export function Hero() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { isSignedIn } = useUser();
+  const router = useRouter();
 
   useEffect(() => {
     setMounted(true);
@@ -19,9 +24,17 @@ export function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-16">
         {/* Left */}
         <div className="flex-1 text-center lg:text-left w-full lg:max-w-2xl">
-          <Button size="lg" className="rounded-full text-sm mb-6 cursor-pointer">
-            Get Started <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          {/* Show Get Started only if not signed in */}
+          {!isSignedIn && (
+            <SignInButton mode="modal" appearance={{ baseTheme: dark }}>
+              <Button
+                size="lg"
+                className="rounded-full text-sm mb-6 cursor-pointer"
+              >
+                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </SignInButton>
+          )}
 
           <div className="mb-6">
             <h1 className="font-bold leading-tight text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
@@ -36,9 +49,31 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-stretch">
-            <Button size="lg" className="w-full sm:w-auto min-w-[160px] cursor-pointer">
-              Explore Now <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            {isSignedIn ? (
+              <Button
+                size="lg"
+                className="w-full sm:w-auto min-w-[160px] cursor-pointer"
+                onClick={() => {
+                  router.push("/events");
+                }}
+              >
+                Explore Now <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            ) : (
+              <SignInButton
+                mode="modal"
+                appearance={{ baseTheme: dark }}
+                forceRedirectUrl="/events"
+                signUpForceRedirectUrl="/events"
+              >
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto min-w-[160px] cursor-pointer"
+                >
+                  Explore Now <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </SignInButton>
+            )}
             <Button
               variant="outline"
               size="lg"
