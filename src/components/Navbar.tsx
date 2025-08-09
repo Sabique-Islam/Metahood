@@ -18,9 +18,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ModeToggle } from "@/components/theme-toggle";
+import { ModeToggle } from "@/components/providers/theme-toggle";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { ClerkAuthButtons } from "@/components/providers/ClerkAuthButtons";
 
 export function Navbar() {
   const { theme } = useTheme();
@@ -95,22 +96,10 @@ export function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            {/* Normal links */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="#offers"
-                  className="hover:text-primary transition-colors flex items-center gap-1"
-                >
-                  Offers
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="#community"
+                  href="/community"
                   className="hover:text-primary transition-colors flex items-center gap-1"
                 >
                   Community
@@ -125,6 +114,9 @@ export function Navbar() {
           {/* Theme Toggle */}
           <ModeToggle />
 
+          {/* Clerk Auth Buttons */}
+          <ClerkAuthButtons />
+
           {/* Mobile Menu with Hamburger */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -135,21 +127,12 @@ export function Navbar() {
             <DropdownMenuContent align="end" className="w-48">
               {/* Events */}
               <DropdownMenuItem asChild>
-                <Link href="#events">Events</Link>
+                <Link href="/events">Events</Link>
               </DropdownMenuItem>
+              {/* Community */}
               <DropdownMenuItem asChild>
-                <Link href="#offers">Offers</Link>
+                <Link href="/community">Community</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="#community">Community</Link>
-              </DropdownMenuItem>
-
-              <div className="border-t my-1"></div>
-
-              {/* Cities inside mobile menu */}
-              <DropdownMenuItem>Bangalore</DropdownMenuItem>
-              <DropdownMenuItem>Mumbai</DropdownMenuItem>
-              <DropdownMenuItem>Delhi</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
