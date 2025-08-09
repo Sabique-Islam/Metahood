@@ -55,7 +55,7 @@ export default function CommunityPage() {
           <div className="bg-background border rounded-xl p-6 mb-8">
             <h2 className="text-xl font-semibold mb-4">Welcome to Your Neighborhood Community!</h2>
             <p className="text-muted-foreground mb-4">
-              Connect with neighbors, share local insights, and stay updated on what's happening around you.
+              Connect with neighbors, share local insights, and stay updated on what&apos;s happening around you.
             </p>
           </div>
 
@@ -111,42 +111,6 @@ export default function CommunityPage() {
               <Button variant="outline" size="sm" className="w-full">
                 Explore Insights
               </Button>
-            </div>
-          </div>
-
-          {/* Recent Activity Section */}
-          <div className="bg-background border rounded-xl p-6">
-            <h2 className="text-xl font-semibold mb-4">Recent Community Activity</h2>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3 pb-4 border-b border-border/50">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Users className="h-5 w-5 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-medium">New member joined: Sarah from Koramangala</p>
-                  <p className="text-sm text-muted-foreground">2 hours ago</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3 pb-4 border-b border-border/50">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                  <MessageCircle className="h-5 w-5 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-medium">Discussion: Best coffee shops in the area</p>
-                  <p className="text-sm text-muted-foreground">5 hours ago</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Calendar className="h-5 w-5 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-medium">Community cleanup event this weekend</p>
-                  <p className="text-sm text-muted-foreground">1 day ago</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

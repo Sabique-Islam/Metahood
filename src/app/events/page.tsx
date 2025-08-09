@@ -5,6 +5,7 @@ import { useUser } from "@clerk/nextjs";
 import { SignInButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
+import Image from "next/image";
 
 export default function EventsPage() {
   const { isSignedIn, isLoaded } = useUser();
@@ -29,9 +30,8 @@ export default function EventsPage() {
         >
           <div className="text-center max-w-md mx-auto px-4">
             <h1 className="text-3xl font-bold mb-4">Sign In Required</h1>
-            <p className="text-muted-foreground mb-8">
-              You need to sign in to view events and discover what's happening
-              in your neighborhood.
+                        <p className="text-muted-foreground mb-8">
+              You need to sign in to view events and discover what&apos;s happening in your neighborhood.
             </p>
             <SignInButton mode="modal">
               <Button size="lg" className="w-full cursor-pointer">
@@ -59,9 +59,11 @@ export default function EventsPage() {
               key={event.id}
               className="rounded-xl border bg-background p-6 shadow hover:shadow-lg transition"
             >
-              <img
+              <Image
                 src={event.imageUrl}
                 alt={event.title}
+                width={800}
+                height={400}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <h2 className="text-xl font-semibold mb-2">{event.title}</h2>
