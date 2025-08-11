@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter, Oswald, Montserrat } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { SocialSidebar } from "@/components/ui/SocialSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +58,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <SocialSidebar />
             {children}
           </ThemeProvider>
         </body>
