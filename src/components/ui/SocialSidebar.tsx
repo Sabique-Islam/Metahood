@@ -17,7 +17,7 @@ export function SocialSidebar() {
         className="group relative h-10 w-10 flex items-center justify-center rounded-full border border-foreground transition-all duration-300 overflow-hidden"
       >
         <div className="absolute inset-0 bg-foreground transition-all duration-300 origin-bottom transform scale-y-0 group-hover:scale-y-100 group-focus:scale-y-100" />
-        <Twitter className="h-5 w-5 text-foreground group-hover:text-background group-focus:text-background transition-colors duration-300" />
+        <Twitter className="h-5 w-5 text-foreground group-hover:invert group-focus:invert transition-colors duration-300 " />
       </Link>
       
       <Link 
@@ -26,8 +26,8 @@ export function SocialSidebar() {
         rel="noopener noreferrer"
         className="group relative h-10 w-10 flex items-center justify-center rounded-full border border-foreground transition-all duration-300 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-foreground transition-all duration-300 origin-left transform scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100" />
-        <Instagram className="h-5 w-5 text-foreground group-hover:text-background group-focus:text-background transition-colors duration-300" />
+        <div className="absolute inset-0 bg-foreground transition-all duration-300 origin-bottom transform scale-y-0 group-hover:scale-y-100 group-focus:scale-y-100" />
+        <Instagram className="h-5 w-5 text-foreground group-hover:invert group-focus:invert transition-colors duration-300" />
       </Link>
       
       <Link 
@@ -36,8 +36,8 @@ export function SocialSidebar() {
         rel="noopener noreferrer"
         className="group relative h-10 w-10 flex items-center justify-center rounded-full border border-foreground transition-all duration-300 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-foreground transition-all duration-300 origin-right transform scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100" />
-        <MessageSquare className="h-5 w-5 text-foreground group-hover:text-background group-focus:text-background transition-colors duration-300" />
+        <div className="absolute inset-0 bg-foreground transition-all duration-300 origin-bottom transform scale-y-0 group-hover:scale-y-100 group-focus:scale-y-100" />
+        <MessageSquare className="h-5 w-5 text-foreground group-hover:invert group-focus:invert transition-colors duration-300" />
       </Link>
     </div>
   );
